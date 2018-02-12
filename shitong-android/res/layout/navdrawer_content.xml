@@ -1,0 +1,70 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:iosched="http://schemas.android.com/apk/res-auto">
+     <FrameLayout
+        android:id="@+id/chosen_account_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/navdrawer_chosen_account_height"
+        android:background="@color/primary_dark"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/keyline_1"
+            android:paddingRight="@dimen/keyline_1"
+            android:paddingTop="@dimen/keyline_1">
+
+            <net.zypro.istrone.ui.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="@dimen/navdrawer_profile_image_size"
+                android:layout_height="@dimen/navdrawer_profile_image_size"
+                android:src="@drawable/person_image_empty"
+                 />
+
+            <TextView
+                android:id="@+id/profile_username_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/profile_image"
+                android:layout_alignParentBottom="true"
+                android:paddingBottom="16dp"
+                android:textSize="@dimen/text_size_medium"
+                android:textColor="@color/body_text_1_inverse"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:ellipsize="end" 
+                android:text="placeHolder"
+                />
+
+            <TextView
+                android:id="@+id/profile_nickname_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/profile_username_text"
+                android:layout_alignLeft="@id/profile_image"
+                android:textSize="@dimen/text_size_large"
+                android:textStyle="bold"
+                android:textColor="@color/body_text_1_inverse"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:ellipsize="end" 
+                android:text="placeHolder"
+                />
+
+        </RelativeLayout>
+    </FrameLayout>
+    <FrameLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        
+
+        <!-- Drawer items -->
+        <LinearLayout
+            android:id="@+id/navdrawer_items_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical" />
+    </FrameLayout>
+</merge>

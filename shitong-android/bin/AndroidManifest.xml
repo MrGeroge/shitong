@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.zypro.istrone.ui"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <permission
+        android:name="android.permission.FLASHLIGHT"
+        android:permissionGroup="android.permission-group.HARDWARE_CONTROLS"
+        android:protectionLevel="normal" />
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="net.zypro.istrone.ui.HomeActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="net.zypro.istrone.ui.recorder.FFmpegRecorderActivity"
+            android:label="录像"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="net.zypro.istrone.ui.VideoPreviewActivity"
+            android:label="@string/title_activity_video_preview" >
+        </activity>
+        <activity
+            android:name="net.zypro.istrone.ui.LoginActivity"
+            android:label="登陆" >
+        </activity>
+        <activity
+            android:name="net.zypro.istrone.ui.MeActivity"
+            android:label="@string/title_activity_me" >
+        </activity>
+        <activity
+            android:name="net.zypro.istrone.ui.SearchActivity"
+            android:label="@string/title_activity_search" >
+        </activity>
+        <activity
+            android:name="net.zypro.istrone.ui.EditInfoActivity"
+            android:label="@string/title_activity_edit_info" >
+        </activity>
+        <activity
+            android:name="net.zypro.istrone.ui.RegisterActivity"
+            android:label="@string/title_activity_register" >
+        </activity>
+        <activity
+            android:name="net.zypro.istrone.ui.VideoPublishActivity"
+            android:label="@string/title_activity_video_publish" >
+        </activity>
+        <activity
+            android:name="net.zypro.istrone.ui.SettingActivity"
+            android:label="@string/title_activity_setting" >
+        </activity>
+    </application>
+
+</manifest>

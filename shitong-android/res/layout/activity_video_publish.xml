@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+
+    <ImageView
+         android:id="@+id/videoCover"
+         android:layout_width="match_parent"
+         android:layout_height="240dp"
+         android:scaleType="centerCrop"
+         android:src="@drawable/videoview_default_pic" />
+    
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:lines="3"
+        android:inputType="textMultiLine" 
+        android:hint="请输入对视频的描述"
+            >
+
+            <requestFocus />
+    </EditText>
+    
+	<EditText
+	       android:id="@+id/tags"
+	       android:layout_width="match_parent"
+	       android:layout_height="wrap_content"
+	       android:drawableLeft="@drawable/feed_tag_icon"
+	       android:ems="10" 
+	       android:hint="请输入一个视频的标签"
+	       />
+   
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+        <Button
+        android:id="@+id/save_draft"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:textColor="@color/body_text_1_inverse"
+        android:background="@drawable/publish_btn_bg"
+        android:text="存草稿" />
+        
+        <Button
+        android:id="@+id/publish"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:textColor="@color/body_text_1_inverse"
+        android:background="@drawable/publish_btn_bg"
+        android:text="发布" />
+        
+	</LinearLayout>
+
+    
+
+</LinearLayout>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>  
+        <!--连接池的最小连接数-->   
+        <property name="hibernate.c3p0.min_size">5</property>  
+        <!--最大连接数-->   
+        <property name="hibernate.c3p0.max_size">30</property>  
+        <!--连接超时时间-->  
+        <property name="hibernate.c3p0.timeout">1800</property>  
+        <!--statemnets缓存大小-->   
+        <property name="hibernate.c3p0.max_statements">100</property>  
+        <!--每隔多少秒检测连接是否可正常使用  -->   
+        <property name="hibernate.c3p0.idle_test_period">121</property>  
+        <!--当池中的连接耗尽的时候，一次性增加的连接数量,默认为3-->   
+        <property name="hibernate.c3p0.acquire_increment">1</property>  
+        <property name="hibernate.c3p0.validate">true</property>
+      
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password"></property>
+       <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/winter</property>
+       <property name="hibernate.connection.username">root</property> 
+      
+  
+        
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="show_sql">true</property>
+         <property name="format_sql">true</property>
+        <property name="hbm2ddl.auto">update</property>
+        <property name="current_session_context_class">thread</property>
+        <property name="connection.useUnicode">true</property>
+        <property name="connection.characterEncoding">UTF-8</property>
+      <mapping class="net.zypro.winter.video.bean.User"/>
+      <mapping class="net.zypro.winter.video.bean.Admin"/>
+      <mapping class="net.zypro.winter.video.bean.Video"/>
+      <mapping class="net.zypro.winter.video.bean.UserInfo"/>
+      <mapping class="net.zypro.winter.video.bean.Comment"/>
+      <mapping class="net.zypro.winter.video.bean.Collect"/>
+      <mapping class="net.zypro.winter.video.bean.Friend"/>
+      <mapping class="net.zypro.winter.video.bean.Message"/>
+       <mapping class="net.zypro.winter.video.bean.Love"/>
+       <mapping class="net.zypro.winter.video.bean.Republish"/>
+         <mapping class="net.zypro.winter.video.bean.Share"/>
+    </session-factory> 
+    
+</hibernate-configuration>

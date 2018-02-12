@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:padding="16dp"
+        >
+        
+        <net.zypro.istrone.ui.PowerImageView
+            android:id="@+id/avatar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            />
+
+        <TextView
+            android:id="@+id/nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/avatar"
+            android:layout_marginLeft="16dp"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@color/primary"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="用户名" />
+
+        <TextView
+            android:id="@+id/timestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/nickname"
+            android:layout_alignBottom="@id/avatar"
+            android:textSize="@dimen/text_size_small"
+            android:textColor="@color/body_text_2"
+            android:text="07月23日 21:34" />       
+    </RelativeLayout>
+
+    <net.zypro.istrone.ui.PowerVideoPlayer
+        android:id="@+id/powerVideoPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+     >
+    </net.zypro.istrone.ui.PowerVideoPlayer>
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_medium"
+        android:textColor="@color/body_text_1"
+        android:paddingTop="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="来个小苹果吧！好戏在后面哦" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        
+        >
+        
+        <Button
+            android:id="@+id/tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:background="@color/card_bg"
+            android:drawableLeft="@drawable/feed_tag_icon"
+            android:textSize="@dimen/text_size_small"
+            android:textColor="@color/body_text_2"
+            android:text="标签1" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+		<Button
+		     android:id="@+id/follow"
+	         style="@style/CardToolBarItem"
+	         android:drawableLeft="@drawable/follow_icon"
+	         android:text="0" />
+
+       	<Button
+       	     android:id="@+id/comment"
+	         style="@style/CardToolBarItem"
+	         android:drawableLeft="@drawable/comment_icon"
+	         android:text="0" />
+
+       	<Button
+       	     android:id="@+id/heart"
+	         style="@style/CardToolBarItem"
+	         android:drawableLeft="@drawable/heart_icon"
+	         android:text="0" />
+        <Button
+             android:id="@+id/share"
+	         style="@style/CardToolBarItem"
+	         android:drawableLeft="@drawable/share_icon"
+	         android:text="0" />
+
+    </LinearLayout>
+</LinearLayout>
